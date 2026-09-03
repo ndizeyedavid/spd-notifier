@@ -1,0 +1,7 @@
+# Saved SPD-Hub session cookie (live credential — never commit)
+.spd_session.json
+.spd_settings.json
+
+# Python
+__pycache__/
+*.pyc
