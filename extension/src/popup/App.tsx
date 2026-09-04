@@ -1,14 +1,18 @@
 import { useState } from "react";
-import SplashScreen from "./components/SplashScreen";
+import SplashScreen from "./screens/SplashScreen";
+import SampleImage from "@/assets/onboarding/notif.png";
+import OnboardingScreen from "./screens/OnboardingScreen";
+import AuthScreen from "./screens/AuthScreen";
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState<
-    "splash" | "onboarding" | "main" | "job" | "profile"
-  >("splash");
+    "splash" | "onboarding" | "auth" | "main" | "job" | "profile"
+  >("auth");
   return (
     <>
-      {/* {currentScreen === "splash" && <SplashScreen />} */}
-      <main className="pt-10">Onboardingi</main>
+      {currentScreen === "splash" && <SplashScreen />}
+      {currentScreen === "onboarding" && <OnboardingScreen />}
+      {currentScreen === "auth" && <AuthScreen />}
     </>
   );
 }
